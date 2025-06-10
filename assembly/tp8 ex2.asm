@@ -1,5 +1,6 @@
 	.data
 prompt1: .asciiz "abcdefg"
+
 	.text
 main:
 	la   $a0, prompt1
@@ -30,4 +31,5 @@ while:
 end_while:
 	move	$v0, $t1
 	jr	$ra
+	
 	

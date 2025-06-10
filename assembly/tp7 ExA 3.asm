@@ -7,7 +7,7 @@ lista: 	.space 24 #6 palavras vezes 4 bytes
 	la $t2, lista
 	li $t0, 0 #int i = 0
 	
-for:	bge $t0, 6, endfor
+for:	bge $t0, 5, endfor
 	
 	sll $t1, $t0, 2 #t1 = i*4
 	add $t1, $t2, $t1 # t1 = lista[i] = lista + i*4
@@ -19,7 +19,7 @@ for:	bge $t0, 6, endfor
 	li $v0, 5
 	syscall
 	
-	sw $v0, 0($t1)
+	sw $v0, lista($t1)
 	
 	
 	addi $t0, $t0, 1 #i++

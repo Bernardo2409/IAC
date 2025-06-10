@@ -1,0 +1,25 @@
+	.data
+	
+	.text
+main:
+
+
+x_to_y:
+
+if:	bne 	$a1, 0, endif
+	li 	$v0, 1
+	jr 	$ra
+	
+endif:	subi	$a1, $a1, 1
+
+
+	addiu	$sp, $sp, -8
+	sw	$ra, 0($sp)
+	sw	$a0, 4($sp)
+	jal	x_to_y
+	lw	$ra, 0($sp)
+	lw	$a0, 4($sp)
+	addiu	$sp, $sp, 8
+	mulou	$v0, $a0, $v0
+	jr	$ra
+

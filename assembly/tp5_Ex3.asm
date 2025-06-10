@@ -17,7 +17,7 @@ main:	# dar print ao prompt1
 	syscall
 	move	$t1, $v0
 	
-	#dar print ao promp2
+	#dar print ao prompt2
 	la	$a0, prompt2
 	li	$v0, 4
 	syscall
